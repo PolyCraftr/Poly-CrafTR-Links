@@ -34,16 +34,17 @@ const config = useRuntimeConfig();
 const getImageUrl = (imageName) => {
   if (!imageName) return '';
 
-  // baseURL'in sonundaki ve imageName'in başındaki fazla bölü işaretlerini temizliyoruz
-  const base = config.app.baseURL.replace(/\/$/, ''); 
-  const cleanImageName = imageName.replace(/^\//, '');
-
-  const fullPath = `${base}/${cleanImageName}`;
+  // 1. Nuxt'un ayarlarından baseURL'i alıyoruz (GitHub'da /Poly-CrafTR-Links/ olur)
+  const base = config.app.baseURL;
   
-  // Nereye bakmaya çalıştığını anlamak için konsola yazdıralım
-  console.log("Resim yolu deneniyor:", fullPath);
+  // 2. Eğer isim zaten '/' ile başlıyorsa onu temizleyelim
+  const cleanName = imageName.startsWith('/') ? imageName.substring(1) : imageName;
   
-  return fullPath;
+  // 3. Base URL ile dosya adını birleştiriyoruz
+  // Eğer base '/' ile bitmiyorsa araya bir '/' ekliyoruz
+  const separator = base.endsWith('/') ? '' : '/';
+  
+  return `${base}${separator}${cleanName}`;
 };
 </script>
 

@@ -3,9 +3,9 @@
     <div class="relative z-10">
       <!-- Main Content -->
       <div class="flex flex-col mt-10 items-center">
-        <ImageComponent />
-        <p class="text-text text-center text-2xl mt-3 font-bold">{{ user.name }}</p>
-        <p class="text-text text-center text-lg mt-2">{{ user.role }}</p>
+       <ImageComponent 
+        :frontImage="user.userImage" 
+        :backImage="user.userImageBack"/>
       </div>
 
       <div class="flex flex-col mt-8 items-center">
