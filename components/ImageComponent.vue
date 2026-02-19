@@ -33,9 +33,17 @@ const config = useRuntimeConfig();
 
 const getImageUrl = (imageName) => {
   if (!imageName) return '';
-  // Başına eğik çizgi eklemeden, doğrudan baseURL ile birleştiriyoruz
-  const base = config.app.baseURL.endsWith('/') ? config.app.baseURL : config.app.baseURL + '/';
-  return base + imageName;
+
+  // baseURL'in sonundaki ve imageName'in başındaki fazla bölü işaretlerini temizliyoruz
+  const base = config.app.baseURL.replace(/\/$/, ''); 
+  const cleanImageName = imageName.replace(/^\//, '');
+
+  const fullPath = `${base}/${cleanImageName}`;
+  
+  // Nereye bakmaya çalıştığını anlamak için konsola yazdıralım
+  console.log("Resim yolu deneniyor:", fullPath);
+  
+  return fullPath;
 };
 </script>
 
