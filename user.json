@@ -1,0 +1,63 @@
+{
+  "title" : "Poly CrafTR Links",
+  "name": "POLY CRAFTR",
+"role": "Innovative Maker | DIY Enthusiast | Tech & Design Explorer",
+  "userImage" : "polycraftr.JPG",
+  "userImageBack": "Logo.png",
+  "gitRepository": "mylinks",
+  "useShadow": true,
+
+"seoDescription": "🏆 3D Baskı Tüyoları ve Yaratıcı Projelerle Hayallerinizi Gerçeğe Dönüştürün.\n📦 Türkiye'nin Her Yerine Güvenli Gönderim!",
+  "seoTitle": "Poly Craftr Links",
+  "seoImage": "polycraftr.JPG",
+
+  "theme":{
+    "colors": {
+      "primary": "#4C4860",
+      "secondary": "#152241",
+      "text": "#ffffff"
+    }
+  },
+
+
+  "links":[
+    {
+      "name": "Shopier",
+      "url":  "https://www.shopier.com/polycraftr",
+      "image": "shopier.png"
+    },
+    {
+      "name": "Gardrops",
+      "url":  "https://www.gardrops.com/altanaydin01-u-5350847",
+      "image": "gardrops1.png"
+    },
+    {
+      "name": "MakerWorld",
+      "url":  "https://makerworld.com/tr/@AltanAydin",
+      "image": "makerworlds.png"
+    },
+    {
+      "name": "Ekipmanlar",
+      "url":  "https://app.hb.biz/fadvwUVBtwHs",
+      "image": "hepsiburada.png"
+    }
+  ],
+
+  "icons":[
+    {
+      "name": "Tiktok",
+      "url":  "https://www.tiktok.com/@polycraftr",
+      "bootstrapIcon": "bi bi-tiktok"
+    },
+    {
+      "name": "Instagram",
+      "url":  "https://www.instagram.com/polycraftr/",
+      "bootstrapIcon": "bi bi-instagram"
+    },
+    {
+      "name": "Youtube",
+      "url":  "https://www.youtube.com/@altanaydns",
+      "bootstrapIcon": "bi bi-youtube"
+    }
+  ]
+}
