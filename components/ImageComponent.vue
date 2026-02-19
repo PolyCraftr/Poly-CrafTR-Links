@@ -32,13 +32,10 @@ const flipped = ref(false);
 const config = useRuntimeConfig();
 
 const getImageUrl = (imageName) => {
-  if (!imageName) {
-    console.error("Hata: Resim adı boş geldi!");
-    return '';
-  }
-  const fullPath = config.app.baseURL + imageName;
-  console.log("Resim yolu oluşturuldu:", fullPath);
-  return fullPath;
+  if (!imageName) return '';
+  // Başına eğik çizgi eklemeden, doğrudan baseURL ile birleştiriyoruz
+  const base = config.app.baseURL.endsWith('/') ? config.app.baseURL : config.app.baseURL + '/';
+  return base + imageName;
 };
 </script>
 
