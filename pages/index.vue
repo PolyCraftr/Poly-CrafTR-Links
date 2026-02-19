@@ -5,12 +5,12 @@
       <div class="flex flex-col mt-10 items-center">
        <ImageComponent 
         :frontImage="user.userImage" 
-        :backImage="user.userImageBack"/>
+        :backImage="user.userImageBack"/> 
       </div>
 
-      <div class="flex flex-col mt-8 items-center">
-        <LinkComponent v-for="link in user.links" :key="link" :link="link" />
-      </div>
+      <div class="flex flex-col mt-8 items-center w-full max-w-md mx-auto gap-4">
+  <LinkComponent v-for="link in user.links" :key="link.title" :link="link" />
+</div>
 
       <div class="flex items-center justify-center gap-3 mt-1">
         <IconsComponent v-for="icon in user.icons" :key="icon" :icon="icon" />
